@@ -185,7 +185,7 @@ void net_clear(NET *net)
   if (!vio_is_blocking(net->vio))		/* Safety if SSL */
   {
     while ( (count = vio_read(net->vio, (char*) (net->buff),
-			      net->max_packet)) > 0)
+			      (int)net->max_packet)) > 0)
       DBUG_PRINT("info",("skipped %d bytes from file: %s",
 			 count,vio_description(net->vio)));
     if (is_blocking)
@@ -510,7 +510,7 @@ my_real_read(NET *net, size_t *complen)
       while (remain > 0)
       {
 	/* First read is done with non blocking mode */
-        if ((long) (length=vio_read(net->vio,(char*) pos,remain)) <= 0L)
+        if ((long) (length=vio_read(net->vio,(char*) pos, (int)remain)) <= 0L)
         {
           my_bool interrupted = vio_should_retry(net->vio);
 

@@ -86,5 +86,5 @@ uint my_write(int Filedes, const byte *Buffer, uint Count, myf MyFlags)
   }
   if (MyFlags & (MY_NABP | MY_FNABP))
     DBUG_RETURN(0);			/* Want only errors */
-  DBUG_RETURN(writenbytes+written);
+  DBUG_RETURN((uint)(writenbytes+written));
 } /* my_write */

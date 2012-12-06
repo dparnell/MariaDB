@@ -676,7 +676,7 @@ static void convert_to_datetime(MYSQL_TIME *t, unsigned char **row, uint len, en
     if (type == MYSQL_TYPE_TIME)
     {
       t->neg= to[0];
-      t->day= (ulong) sint4korr(to + 1);
+      t->day= (unsigned int) sint4korr(to + 1);
       t->time_type= MYSQL_TIMESTAMP_TIME;
       offset= 8;
       to++;
@@ -714,7 +714,7 @@ void ps_fetch_datetime(MYSQL_BIND *r_param, const MYSQL_FIELD * field,
                        unsigned char **row)
 {
   MYSQL_TIME *t= (MYSQL_TIME *)r_param->buffer;
-  unsigned int len= net_field_length(row);
+  unsigned int len= (unsigned int)net_field_length(row);
 
   switch (r_param->buffer_type) {
   case MYSQL_TYPE_DATETIME:

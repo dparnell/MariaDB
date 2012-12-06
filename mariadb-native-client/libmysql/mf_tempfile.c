@@ -87,7 +87,7 @@ File create_temp_file(char *to, const char *dir, const char *prefix,
 #elif defined(HAVE_MKSTEMP)
   {
     char prefix_buff[30];
-    uint pfx_len;
+    size_t pfx_len;
     File org_file;
 
     pfx_len=(strmov(strnmov(prefix_buff,

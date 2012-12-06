@@ -86,7 +86,7 @@ my_string fn_format(my_string to, const char *name, const char *dsk,
 
   if (strlen(dev)+length+strlen(ext) >= FN_REFLEN || length >= FN_LEN )
   {				/* To long path, return original */
-    uint tmp_length;
+    size_t tmp_length;
     if (flag & 64)
       return 0;
     tmp_length=strlength(startpos);

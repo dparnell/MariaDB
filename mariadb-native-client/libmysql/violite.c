@@ -216,7 +216,7 @@ int vio_read(Vio * vio, gptr buf, int size)
   r = recv(vio->sd, buf, size,0);
 #else
   errno=0; /* For linux */
-  r = read(vio->sd, buf, size);
+  r = (int)read(vio->sd, buf, size);
 #endif /* _WIN32 */
 #ifndef DBUG_OFF
   if (r < 0)
@@ -256,7 +256,7 @@ int vio_write(Vio * vio, const gptr buf, int size)
   }
   r = send(vio->sd, buf, size,0);
 #else
-  r = write(vio->sd, buf, size);
+  r = (int)write(vio->sd, buf, size);
 #endif /* _WIN32 */
 #ifndef DBUG_OFF
   if (r < 0)

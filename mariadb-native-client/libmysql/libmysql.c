@@ -439,7 +439,7 @@ static int cli_report_progress(MYSQL *mysql, uchar *packet, uint length)
   max_stage= (uint) *packet++;
   progress= uint3korr(packet)/1000.0;
   packet+= 3;
-  proc_length= net_field_length(&packet);
+  proc_length= (uint)net_field_length(&packet);
   if (packet + proc_length > start + length)
     return 1;                         /* Wrong packet */
   (*mysql->options.extension->report_progress)(mysql, stage, max_stage,
@@ -993,7 +993,7 @@ static void mysql_read_default_options(struct st_mysql_options *options,
         case OPT_protocol:
           options->protocol= find_type(opt_arg, &protocol_types, 0);
 #ifndef _WIN32
-          if (options->protocol < 0 || options->protocol > 1) 
+          if ((int)options->protocol < 0 || options->protocol > 1)
 #else
           if (options->protocol < 0)
 #endif
@@ -1595,7 +1595,7 @@ mysql_real_connect(MYSQL *mysql,const char *host, const char *user,
     my_set_error(mysql, CR_SERVER_LOST, SQLSTATE_UNKNOWN, 0);
     goto error;
   }
-  if ((pkt_length=net_safe_read(mysql)) == packet_error)
+  if ((pkt_length=(uint)net_safe_read(mysql)) == packet_error)
     goto error;
 
   end= (char *)net->read_pos;
@@ -1695,10 +1695,10 @@ mysql_real_connect(MYSQL *mysql,const char *host, const char *user,
       scramble_len= pkt_scramble_len;
       scramble_plugin= scramble_data + scramble_len;
       if (scramble_data + scramble_len > end_pkt)
-        scramble_len= end_pkt - scramble_data;
+        scramble_len= (uint)(end_pkt - scramble_data);
     } else
     {
-      scramble_len= end_pkt - scramble_data;
+      scramble_len= (uint)(end_pkt - scramble_data);
       scramble_plugin= native_password_plugin_name;
     }
   } else
@@ -2081,7 +2081,7 @@ get_info:
 						   CLIENT_LONG_FLAG))))
     DBUG_RETURN(-1);
   mysql->status=MYSQL_STATUS_GET_RESULT;
-  mysql->field_count=field_count;
+  mysql->field_count=(unsigned int)field_count;
   DBUG_RETURN(0);
 }
 

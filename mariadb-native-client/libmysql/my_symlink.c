@@ -42,7 +42,7 @@ int my_readlink(char *to, const char *filename, myf MyFlags)
   int length;
   DBUG_ENTER("my_readlink");
 
-  if ((length=readlink(filename, to, FN_REFLEN-1)) < 0)
+  if ((length=(int)readlink(filename, to, FN_REFLEN-1)) < 0)
   {
     /* Don't give an error if this wasn't a symlink */
     if ((my_errno=errno) == EINVAL)

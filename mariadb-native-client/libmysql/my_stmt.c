@@ -409,7 +409,7 @@ int store_param(MYSQL_STMT *stmt, int column, unsigned char **p)
             */
            MYSQL_TIME *t= (MYSQL_TIME *)stmt->params[column].buffer;
            char t_buffer[14];
-           uint len= *stmt->params[column].length;
+           uint len= (uint)*stmt->params[column].length;
 
            t_buffer[0]= len;
            t_buffer[1]= t->neg ? 1 : 0;
@@ -440,7 +440,7 @@ int store_param(MYSQL_STMT *stmt, int column, unsigned char **p)
             */ 
             MYSQL_TIME *t= (MYSQL_TIME *)stmt->params[column].buffer;
             char t_buffer[12];
-            uint len= *stmt->params[column].length;
+            uint len= (uint)*stmt->params[column].length;
 
             t_buffer[0]= len;
             int2store(t_buffer + 1, t->year);

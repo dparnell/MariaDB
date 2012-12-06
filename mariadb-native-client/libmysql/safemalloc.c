@@ -174,7 +174,7 @@ gptr _mymalloc (size_t uSize, const char *sFile, uint uLine, myf MyFlags)
     pTmp -> aData[uSize + sf_malloc_prehunc+3] = MAGICEND3;
     pTmp -> sFileName = (my_string) sFile;
     pTmp -> uLineNum = uLine;
-    pTmp -> uDataSize = uSize;
+    pTmp -> uDataSize = (uint)uSize;
     pTmp -> pPrev = NULL;
 
     /* Add this remember structure to the linked list */
