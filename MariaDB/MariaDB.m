@@ -33,16 +33,18 @@
 static void createError(NSError** error, MYSQL* mysql) {
     if(error) {
         int code = mysql_errno(mysql);
-        NSString* str = [NSString stringWithFormat: @"%s", mysql_error(mysql)];
-        NSString* state = [NSString stringWithFormat: @"%s", mysql_sqlstate(mysql)];
-        NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithInt: code], @"Code",
-                              state, @"SQL State",
-                              str, @"SQL Error",
-                              nil];
-        NSError* err = [NSError errorWithDomain: str code: code userInfo: dict];
-        
-        *error = err;
+        if(code) {
+            NSString* str = [NSString stringWithFormat: @"%s", mysql_error(mysql)];
+            NSString* state = [NSString stringWithFormat: @"%s", mysql_sqlstate(mysql)];
+            NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithInt: code], @"Code",
+                                  state, @"SQL State",
+                                  str, @"SQL Error",
+                                  nil];
+            NSError* err = [NSError errorWithDomain: str code: code userInfo: dict];
+            
+            *error = err;
+        }
     }
 }
 
@@ -86,11 +88,118 @@ static void createError(NSError** error, MYSQL* mysql) {
         return NO;
     }
     
+    MYSQL_RES* result = mysql_store_result(mysql);
+    if(result) {
+        // ignore any result returned by the query
+        mysql_free_result(result);
+    }
+    
     return YES;
 }
 
 - (UInt64)affectedRows {
     return mysql_affected_rows(mysql);
+}
+
+- (BOOL)query:(NSString*)sql withCallback:(BOOL(^)(NSDictionary*, NSArray*))callback andError:(NSError**)error {
+    const char* query = [sql cStringUsingEncoding: NSUTF8StringEncoding];
+    
+    if (mysql_real_query(mysql, query, (uint)strlen(query))) {
+        
+        createError(error, mysql);
+        return NO;
+    }
+    
+    MYSQL_RES* result = mysql_use_result(mysql);
+    if(result) {
+        NSNumberFormatter* number_formatter = nil;
+        NSDateFormatter* date_time_formatter = nil;
+        NSDateFormatter* date_formatter = nil;
+        NSDateFormatter* time_formatter = nil;
+        
+        MYSQL_ROW row;
+        int field_count = mysql_num_fields(result);
+        NSMutableArray* field_names = [NSMutableArray arrayWithCapacity: field_count];
+        MYSQL_FIELD *fields = mysql_fetch_fields(result);
+        
+        for(int i=0; i<field_count; i++) {
+            [field_names addObject: [NSString stringWithCString: fields[i].name encoding: NSUTF8StringEncoding]];
+        }
+        
+        while ((row = mysql_fetch_row(result))) {
+            NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity: field_count];
+            unsigned long *lengths = mysql_fetch_lengths(result);
+            NSString* str;
+            
+            for(int i=0; i<field_count; i++) {
+                id value;
+                
+                if(row[i]) {
+                    if(IS_NUM(fields[i].type)) {
+                        if(number_formatter == nil) {
+                            number_formatter = [NSNumberFormatter new];
+                        }
+                        
+                        str = [NSString stringWithCString: row[i] encoding: NSUTF8StringEncoding];
+                        value = [number_formatter numberFromString: str];
+                        if(value == nil) {
+                            value = [NSError errorWithDomain: @"Invalid number" code: 0 userInfo: [NSDictionary dictionaryWithObject: str forKey: @"number"]];
+                        }
+                        
+                    } else if(fields[i].type == MYSQL_TYPE_BLOB || fields[i].type == MYSQL_TYPE_LONG_BLOB){
+                        value = [NSData dataWithBytes: row[i] length: lengths[i]];
+                    } else if(fields[i].type == MYSQL_TYPE_DATE) {
+                        if(date_formatter == nil) {
+                            date_formatter = [NSDateFormatter new];
+                            [date_formatter setDateFormat: @"yyyy-MM-dd"];
+                        }
+                        
+                        str = [NSString stringWithCString: row[i] encoding: NSUTF8StringEncoding];
+                        value = [date_formatter dateFromString: str];
+                        if(value == nil) {
+                            value = [NSError errorWithDomain: @"Invalid date" code: 0 userInfo: [NSDictionary dictionaryWithObject: str forKey: @"date"]];
+                        }                        
+                    } else if(fields[i].type == MYSQL_TYPE_TIME) {
+                        if(time_formatter == nil) {
+                            time_formatter = [NSDateFormatter new];
+                            [time_formatter setDateFormat: @"HH:mm:SS"];
+                        }
+                        str = [NSString stringWithCString: row[i] encoding: NSUTF8StringEncoding];
+                        value = [time_formatter dateFromString: str];
+                        if(value == nil) {
+                            value = [NSError errorWithDomain: @"Invalid time" code: 0 userInfo: [NSDictionary dictionaryWithObject: str forKey: @"time"]];
+                        }
+                    
+                    } else if(fields[i].type == MYSQL_TYPE_DATETIME || fields[i].type == MYSQL_TYPE_TIMESTAMP) {
+                        if(date_time_formatter == nil) {
+                            date_time_formatter = [NSDateFormatter new];
+                            [date_time_formatter setDateFormat: @"yyyy-MM-dd HH:mm:SS"];
+                        }
+                        
+                        str = [NSString stringWithCString: row[i] encoding: NSUTF8StringEncoding];
+                        value = [date_time_formatter dateFromString: str];
+                        if(value == nil) {
+                            value = [NSError errorWithDomain: @"Invalid datetime" code: 0 userInfo: [NSDictionary dictionaryWithObject: str forKey: @"datetime"]];
+                        }
+                    } else {
+                        value = [NSString stringWithCString: row[i] encoding: NSUTF8StringEncoding];
+                    }
+                } else {
+                    value = [NSNull null];
+                }
+                
+                [dict setObject: value forKey: [field_names objectAtIndex: i]];
+            }
+            
+            callback(dict, field_names);
+        }
+        
+        mysql_free_result(result);
+        return YES;
+    }
+    
+    createError(error, mysql);
+    return NO;
 }
 
 - (BOOL) close:(NSError **)error {
