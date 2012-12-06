@@ -10,6 +10,125 @@
 		652AD3E7166F51030077D2E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AD3E6166F51030077D2E0 /* Cocoa.framework */; };
 		652AD3F1166F51030077D2E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652AD3EF166F51030077D2E0 /* InfoPlist.strings */; };
 		652AD3F5166F51030077D2E0 /* MariaDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 652AD3F4166F51030077D2E0 /* MariaDB.m */; };
+		652AD44B166F52C10077D2E0 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD3FC166F52C10077D2E0 /* array.c */; };
+		652AD44C166F52C10077D2E0 /* bchange.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD3FD166F52C10077D2E0 /* bchange.c */; };
+		652AD44D166F52C10077D2E0 /* bmove_upp.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD3FE166F52C10077D2E0 /* bmove_upp.c */; };
+		652AD44E166F52C10077D2E0 /* bmove.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD3FF166F52C10077D2E0 /* bmove.c */; };
+		652AD44F166F52C10077D2E0 /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD400166F52C10077D2E0 /* charset.c */; };
+		652AD451166F52C10077D2E0 /* dbug.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD402166F52C10077D2E0 /* dbug.c */; };
+		652AD452166F52C10077D2E0 /* default.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD403166F52C10077D2E0 /* default.c */; };
+		652AD453166F52C10077D2E0 /* errmsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD404166F52C10077D2E0 /* errmsg.c */; };
+		652AD454166F52C10077D2E0 /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD405166F52C10077D2E0 /* errors.c */; };
+		652AD455166F52C10077D2E0 /* get_password.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD406166F52C10077D2E0 /* get_password.c */; };
+		652AD456166F52C10077D2E0 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD407166F52C10077D2E0 /* getopt.c */; };
+		652AD457166F52C10077D2E0 /* getopt1.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD408166F52C10077D2E0 /* getopt1.c */; };
+		652AD458166F52C10077D2E0 /* int2str.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD409166F52C10077D2E0 /* int2str.c */; };
+		652AD459166F52C10077D2E0 /* is_prefix.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD40A166F52C10077D2E0 /* is_prefix.c */; };
+		652AD45B166F52C10077D2E0 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD40C166F52C10077D2E0 /* list.c */; };
+		652AD45C166F52C10077D2E0 /* llstr.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD40D166F52C10077D2E0 /* llstr.c */; };
+		652AD45D166F52C10077D2E0 /* longlong2str.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD40E166F52C10077D2E0 /* longlong2str.c */; };
+		652AD45E166F52C10077D2E0 /* mf_dirname.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD40F166F52C10077D2E0 /* mf_dirname.c */; };
+		652AD45F166F52C10077D2E0 /* mf_fn_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD410166F52C10077D2E0 /* mf_fn_ext.c */; };
+		652AD460166F52C10077D2E0 /* mf_format.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD411166F52C10077D2E0 /* mf_format.c */; };
+		652AD461166F52C10077D2E0 /* mf_loadpath.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD412166F52C10077D2E0 /* mf_loadpath.c */; };
+		652AD462166F52C10077D2E0 /* mf_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD413166F52C10077D2E0 /* mf_pack.c */; };
+		652AD463166F52C10077D2E0 /* mf_path.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD414166F52C10077D2E0 /* mf_path.c */; };
+		652AD464166F52C10077D2E0 /* mf_tempfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD415166F52C10077D2E0 /* mf_tempfile.c */; };
+		652AD465166F52C10077D2E0 /* mf_unixpath.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD416166F52C10077D2E0 /* mf_unixpath.c */; };
+		652AD466166F52C10077D2E0 /* mf_wcomp.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD417166F52C10077D2E0 /* mf_wcomp.c */; };
+		652AD467166F52C10077D2E0 /* mulalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD418166F52C10077D2E0 /* mulalloc.c */; };
+		652AD468166F52C10077D2E0 /* my_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD419166F52C10077D2E0 /* my_alloc.c */; };
+		652AD469166F52C10077D2E0 /* my_auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41A166F52C10077D2E0 /* my_auth.c */; };
+		652AD46A166F52C10077D2E0 /* my_create.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41B166F52C10077D2E0 /* my_create.c */; };
+		652AD46B166F52C10077D2E0 /* my_delete.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41C166F52C10077D2E0 /* my_delete.c */; };
+		652AD46C166F52C10077D2E0 /* my_div.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41D166F52C10077D2E0 /* my_div.c */; };
+		652AD46D166F52C10077D2E0 /* my_error.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41E166F52C10077D2E0 /* my_error.c */; };
+		652AD46E166F52C10077D2E0 /* my_fopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD41F166F52C10077D2E0 /* my_fopen.c */; };
+		652AD46F166F52C10077D2E0 /* my_fstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD420166F52C10077D2E0 /* my_fstream.c */; };
+		652AD470166F52C10077D2E0 /* my_gethostbyname.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD421166F52C10077D2E0 /* my_gethostbyname.c */; };
+		652AD471166F52C10077D2E0 /* my_getwd.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD422166F52C10077D2E0 /* my_getwd.c */; };
+		652AD472166F52C10077D2E0 /* my_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD423166F52C10077D2E0 /* my_init.c */; };
+		652AD473166F52C10077D2E0 /* my_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD424166F52C10077D2E0 /* my_lib.c */; };
+		652AD474166F52C10077D2E0 /* my_loaddata.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD425166F52C10077D2E0 /* my_loaddata.c */; };
+		652AD475166F52C10077D2E0 /* my_malloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD426166F52C10077D2E0 /* my_malloc.c */; };
+		652AD476166F52C10077D2E0 /* my_messnc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD427166F52C10077D2E0 /* my_messnc.c */; };
+		652AD477166F52C10077D2E0 /* my_net.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD428166F52C10077D2E0 /* my_net.c */; };
+		652AD478166F52C10077D2E0 /* my_once.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD429166F52C10077D2E0 /* my_once.c */; };
+		652AD479166F52C10077D2E0 /* my_open.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42A166F52C10077D2E0 /* my_open.c */; };
+		652AD47A166F52C10077D2E0 /* my_port.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42B166F52C10077D2E0 /* my_port.c */; };
+		652AD47B166F52C10077D2E0 /* my_pthread.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42C166F52C10077D2E0 /* my_pthread.c */; };
+		652AD47C166F52C10077D2E0 /* my_read.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42D166F52C10077D2E0 /* my_read.c */; };
+		652AD47D166F52C10077D2E0 /* my_realloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42E166F52C10077D2E0 /* my_realloc.c */; };
+		652AD47E166F52C10077D2E0 /* my_secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD42F166F52C10077D2E0 /* my_secure.c */; };
+		652AD47F166F52C10077D2E0 /* my_seek.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD430166F52C10077D2E0 /* my_seek.c */; };
+		652AD480166F52C10077D2E0 /* my_static.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD431166F52C10077D2E0 /* my_static.c */; };
+		652AD482166F52C10077D2E0 /* my_stmt_codec.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD433166F52C10077D2E0 /* my_stmt_codec.c */; };
+		652AD483166F52C10077D2E0 /* my_stmt.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD434166F52C10077D2E0 /* my_stmt.c */; };
+		652AD484166F52C10077D2E0 /* my_symlink.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD435166F52C10077D2E0 /* my_symlink.c */; };
+		652AD485166F52C10077D2E0 /* my_thr_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD436166F52C10077D2E0 /* my_thr_init.c */; };
+		652AD486166F52C10077D2E0 /* my_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD437166F52C10077D2E0 /* my_write.c */; };
+		652AD487166F52C10077D2E0 /* password.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD438166F52C10077D2E0 /* password.c */; };
+		652AD488166F52C10077D2E0 /* safemalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD439166F52C10077D2E0 /* safemalloc.c */; };
+		652AD489166F52C10077D2E0 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43A166F52C10077D2E0 /* sha1.c */; };
+		652AD48A166F52C10077D2E0 /* str2int.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43B166F52C10077D2E0 /* str2int.c */; };
+		652AD48B166F52C10077D2E0 /* strcend.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43C166F52C10077D2E0 /* strcend.c */; };
+		652AD48C166F52C10077D2E0 /* strcont.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43D166F52C10077D2E0 /* strcont.c */; };
+		652AD48D166F52C10077D2E0 /* strend.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43E166F52C10077D2E0 /* strend.c */; };
+		652AD48E166F52C10077D2E0 /* strfill.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD43F166F52C10077D2E0 /* strfill.c */; };
+		652AD48F166F52C10077D2E0 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD440166F52C10077D2E0 /* string.c */; };
+		652AD490166F52C10077D2E0 /* strinstr.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD441166F52C10077D2E0 /* strinstr.c */; };
+		652AD491166F52C10077D2E0 /* strmake.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD442166F52C10077D2E0 /* strmake.c */; };
+		652AD492166F52C10077D2E0 /* strmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD443166F52C10077D2E0 /* strmov.c */; };
+		652AD493166F52C10077D2E0 /* strnmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD444166F52C10077D2E0 /* strnmov.c */; };
+		652AD494166F52C10077D2E0 /* strtoll.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD445166F52C10077D2E0 /* strtoll.c */; };
+		652AD495166F52C10077D2E0 /* strtoull.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD446166F52C10077D2E0 /* strtoull.c */; };
+		652AD496166F52C10077D2E0 /* strxmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD447166F52C10077D2E0 /* strxmov.c */; };
+		652AD497166F52C10077D2E0 /* strxnmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD448166F52C10077D2E0 /* strxnmov.c */; };
+		652AD498166F52C10077D2E0 /* thr_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD449166F52C10077D2E0 /* thr_mutex.c */; };
+		652AD499166F52C10077D2E0 /* typelib.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD44A166F52C10077D2E0 /* typelib.c */; };
+		652AD49F166F53460077D2E0 /* my_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD49E166F53460077D2E0 /* my_config.h */; };
+		652AD4A1166F56320077D2E0 /* mysql_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4A0166F56320077D2E0 /* mysql_version.h */; };
+		652AD4DC166F57790077D2E0 /* my_global.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4DB166F57790077D2E0 /* my_global.h */; };
+		652AD4DE166F57940077D2E0 /* dbug.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4DD166F57940077D2E0 /* dbug.h */; };
+		652AD4E0166F586A0077D2E0 /* my_sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4DF166F586A0077D2E0 /* my_sys.h */; };
+		652AD4E2166F58BF0077D2E0 /* m_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E1166F58BF0077D2E0 /* m_ctype.h */; };
+		652AD4E4166F59190077D2E0 /* m_string.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E3166F59190077D2E0 /* m_string.h */; };
+		652AD500166F59410077D2E0 /* errmsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E5166F59410077D2E0 /* errmsg.h */; };
+		652AD501166F59410077D2E0 /* getopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E6166F59410077D2E0 /* getopt.h */; };
+		652AD502166F59410077D2E0 /* global.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E7166F59410077D2E0 /* global.h */; };
+		652AD503166F59410077D2E0 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E8166F59410077D2E0 /* hash.h */; };
+		652AD504166F59410077D2E0 /* my_alarm.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4E9166F59410077D2E0 /* my_alarm.h */; };
+		652AD505166F59410077D2E0 /* my_base.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4EA166F59410077D2E0 /* my_base.h */; };
+		652AD506166F59410077D2E0 /* my_dir.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4EB166F59410077D2E0 /* my_dir.h */; };
+		652AD507166F59410077D2E0 /* my_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4EC166F59410077D2E0 /* my_list.h */; };
+		652AD508166F59410077D2E0 /* my_net.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4ED166F59410077D2E0 /* my_net.h */; };
+		652AD509166F59410077D2E0 /* my_no_pthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4EE166F59410077D2E0 /* my_no_pthread.h */; };
+		652AD50A166F59410077D2E0 /* my_pthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4EF166F59410077D2E0 /* my_pthread.h */; };
+		652AD50B166F59410077D2E0 /* my_secure.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F0166F59410077D2E0 /* my_secure.h */; };
+		652AD50C166F59410077D2E0 /* my_stmt.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F1166F59410077D2E0 /* my_stmt.h */; };
+		652AD50D166F59410077D2E0 /* client_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F2166F59410077D2E0 /* client_plugin.h */; };
+		652AD50E166F59410077D2E0 /* plugin_auth_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F3166F59410077D2E0 /* plugin_auth_common.h */; };
+		652AD50F166F59410077D2E0 /* plugin_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F4166F59410077D2E0 /* plugin_auth.h */; };
+		652AD510166F59410077D2E0 /* mysql_com.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F5166F59410077D2E0 /* mysql_com.h */; };
+		652AD511166F59410077D2E0 /* mysql_io.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F6166F59410077D2E0 /* mysql_io.h */; };
+		652AD512166F59410077D2E0 /* mysql_mm.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F7166F59410077D2E0 /* mysql_mm.h */; };
+		652AD513166F59410077D2E0 /* mysql_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F8166F59410077D2E0 /* mysql_priv.h */; };
+		652AD514166F59410077D2E0 /* mysql_wireprotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4F9166F59410077D2E0 /* mysql_wireprotocol.h */; };
+		652AD515166F59410077D2E0 /* mysql.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FA166F59410077D2E0 /* mysql.h */; };
+		652AD516166F59410077D2E0 /* mysqld_error.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FB166F59410077D2E0 /* mysqld_error.h */; };
+		652AD517166F59410077D2E0 /* mysys_err.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FC166F59410077D2E0 /* mysys_err.h */; };
+		652AD518166F59410077D2E0 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FD166F59410077D2E0 /* sha1.h */; };
+		652AD519166F59410077D2E0 /* thr_alarm.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FE166F59410077D2E0 /* thr_alarm.h */; };
+		652AD51A166F59410077D2E0 /* violite.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD4FF166F59410077D2E0 /* violite.h */; };
+		652AD523166F5B8E0077D2E0 /* my_charset.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD51B166F5B8D0077D2E0 /* my_charset.c */; };
+		652AD524166F5B8E0077D2E0 /* my_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD51C166F5B8D0077D2E0 /* my_compress.c */; };
+		652AD525166F5B8E0077D2E0 /* my_vsnprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD51D166F5B8E0077D2E0 /* my_vsnprintf.c */; };
+		652AD528166F5B8E0077D2E0 /* strnlen.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD520166F5B8E0077D2E0 /* strnlen.c */; };
+		652AD529166F5B8E0077D2E0 /* strto.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD521166F5B8E0077D2E0 /* strto.c */; };
+		652AD52A166F5B8E0077D2E0 /* violite.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD522166F5B8E0077D2E0 /* violite.c */; };
+		652AD52F166F5C640077D2E0 /* client_plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD52B166F5C640077D2E0 /* client_plugin.c */; };
+		652AD534166F5FBE0077D2E0 /* libmysql.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD533166F5FBE0077D2E0 /* libmysql.c */; };
+		652AD536166F603B0077D2E0 /* net.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD535166F603B0077D2E0 /* net.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +142,126 @@
 		652AD3F2166F51030077D2E0 /* MariaDB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MariaDB-Prefix.pch"; sourceTree = "<group>"; };
 		652AD3F3166F51030077D2E0 /* MariaDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MariaDB.h; sourceTree = "<group>"; };
 		652AD3F4166F51030077D2E0 /* MariaDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MariaDB.m; sourceTree = "<group>"; };
+		652AD3FC166F52C10077D2E0 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "mariadb-native-client/libmysql/array.c"; sourceTree = SOURCE_ROOT; };
+		652AD3FD166F52C10077D2E0 /* bchange.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bchange.c; path = "mariadb-native-client/libmysql/bchange.c"; sourceTree = SOURCE_ROOT; };
+		652AD3FE166F52C10077D2E0 /* bmove_upp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bmove_upp.c; path = "mariadb-native-client/libmysql/bmove_upp.c"; sourceTree = SOURCE_ROOT; };
+		652AD3FF166F52C10077D2E0 /* bmove.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bmove.c; path = "mariadb-native-client/libmysql/bmove.c"; sourceTree = SOURCE_ROOT; };
+		652AD400166F52C10077D2E0 /* charset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = charset.c; path = "mariadb-native-client/libmysql/charset.c"; sourceTree = SOURCE_ROOT; };
+		652AD402166F52C10077D2E0 /* dbug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dbug.c; path = "mariadb-native-client/libmysql/dbug.c"; sourceTree = SOURCE_ROOT; };
+		652AD403166F52C10077D2E0 /* default.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = default.c; path = "mariadb-native-client/libmysql/default.c"; sourceTree = SOURCE_ROOT; };
+		652AD404166F52C10077D2E0 /* errmsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errmsg.c; path = "mariadb-native-client/libmysql/errmsg.c"; sourceTree = SOURCE_ROOT; };
+		652AD405166F52C10077D2E0 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = "mariadb-native-client/libmysql/errors.c"; sourceTree = SOURCE_ROOT; };
+		652AD406166F52C10077D2E0 /* get_password.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = get_password.c; path = "mariadb-native-client/libmysql/get_password.c"; sourceTree = SOURCE_ROOT; };
+		652AD407166F52C10077D2E0 /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = getopt.c; path = "mariadb-native-client/libmysql/getopt.c"; sourceTree = SOURCE_ROOT; };
+		652AD408166F52C10077D2E0 /* getopt1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = getopt1.c; path = "mariadb-native-client/libmysql/getopt1.c"; sourceTree = SOURCE_ROOT; };
+		652AD409166F52C10077D2E0 /* int2str.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = int2str.c; path = "mariadb-native-client/libmysql/int2str.c"; sourceTree = SOURCE_ROOT; };
+		652AD40A166F52C10077D2E0 /* is_prefix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = is_prefix.c; path = "mariadb-native-client/libmysql/is_prefix.c"; sourceTree = SOURCE_ROOT; };
+		652AD40C166F52C10077D2E0 /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = list.c; path = "mariadb-native-client/libmysql/list.c"; sourceTree = SOURCE_ROOT; };
+		652AD40D166F52C10077D2E0 /* llstr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = llstr.c; path = "mariadb-native-client/libmysql/llstr.c"; sourceTree = SOURCE_ROOT; };
+		652AD40E166F52C10077D2E0 /* longlong2str.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = longlong2str.c; path = "mariadb-native-client/libmysql/longlong2str.c"; sourceTree = SOURCE_ROOT; };
+		652AD40F166F52C10077D2E0 /* mf_dirname.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_dirname.c; path = "mariadb-native-client/libmysql/mf_dirname.c"; sourceTree = SOURCE_ROOT; };
+		652AD410166F52C10077D2E0 /* mf_fn_ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_fn_ext.c; path = "mariadb-native-client/libmysql/mf_fn_ext.c"; sourceTree = SOURCE_ROOT; };
+		652AD411166F52C10077D2E0 /* mf_format.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_format.c; path = "mariadb-native-client/libmysql/mf_format.c"; sourceTree = SOURCE_ROOT; };
+		652AD412166F52C10077D2E0 /* mf_loadpath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_loadpath.c; path = "mariadb-native-client/libmysql/mf_loadpath.c"; sourceTree = SOURCE_ROOT; };
+		652AD413166F52C10077D2E0 /* mf_pack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_pack.c; path = "mariadb-native-client/libmysql/mf_pack.c"; sourceTree = SOURCE_ROOT; };
+		652AD414166F52C10077D2E0 /* mf_path.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_path.c; path = "mariadb-native-client/libmysql/mf_path.c"; sourceTree = SOURCE_ROOT; };
+		652AD415166F52C10077D2E0 /* mf_tempfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_tempfile.c; path = "mariadb-native-client/libmysql/mf_tempfile.c"; sourceTree = SOURCE_ROOT; };
+		652AD416166F52C10077D2E0 /* mf_unixpath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_unixpath.c; path = "mariadb-native-client/libmysql/mf_unixpath.c"; sourceTree = SOURCE_ROOT; };
+		652AD417166F52C10077D2E0 /* mf_wcomp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mf_wcomp.c; path = "mariadb-native-client/libmysql/mf_wcomp.c"; sourceTree = SOURCE_ROOT; };
+		652AD418166F52C10077D2E0 /* mulalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mulalloc.c; path = "mariadb-native-client/libmysql/mulalloc.c"; sourceTree = SOURCE_ROOT; };
+		652AD419166F52C10077D2E0 /* my_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_alloc.c; path = "mariadb-native-client/libmysql/my_alloc.c"; sourceTree = SOURCE_ROOT; };
+		652AD41A166F52C10077D2E0 /* my_auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_auth.c; path = "mariadb-native-client/libmysql/my_auth.c"; sourceTree = SOURCE_ROOT; };
+		652AD41B166F52C10077D2E0 /* my_create.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_create.c; path = "mariadb-native-client/libmysql/my_create.c"; sourceTree = SOURCE_ROOT; };
+		652AD41C166F52C10077D2E0 /* my_delete.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_delete.c; path = "mariadb-native-client/libmysql/my_delete.c"; sourceTree = SOURCE_ROOT; };
+		652AD41D166F52C10077D2E0 /* my_div.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_div.c; path = "mariadb-native-client/libmysql/my_div.c"; sourceTree = SOURCE_ROOT; };
+		652AD41E166F52C10077D2E0 /* my_error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_error.c; path = "mariadb-native-client/libmysql/my_error.c"; sourceTree = SOURCE_ROOT; };
+		652AD41F166F52C10077D2E0 /* my_fopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_fopen.c; path = "mariadb-native-client/libmysql/my_fopen.c"; sourceTree = SOURCE_ROOT; };
+		652AD420166F52C10077D2E0 /* my_fstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_fstream.c; path = "mariadb-native-client/libmysql/my_fstream.c"; sourceTree = SOURCE_ROOT; };
+		652AD421166F52C10077D2E0 /* my_gethostbyname.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_gethostbyname.c; path = "mariadb-native-client/libmysql/my_gethostbyname.c"; sourceTree = SOURCE_ROOT; };
+		652AD422166F52C10077D2E0 /* my_getwd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_getwd.c; path = "mariadb-native-client/libmysql/my_getwd.c"; sourceTree = SOURCE_ROOT; };
+		652AD423166F52C10077D2E0 /* my_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_init.c; path = "mariadb-native-client/libmysql/my_init.c"; sourceTree = SOURCE_ROOT; };
+		652AD424166F52C10077D2E0 /* my_lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_lib.c; path = "mariadb-native-client/libmysql/my_lib.c"; sourceTree = SOURCE_ROOT; };
+		652AD425166F52C10077D2E0 /* my_loaddata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_loaddata.c; path = "mariadb-native-client/libmysql/my_loaddata.c"; sourceTree = SOURCE_ROOT; };
+		652AD426166F52C10077D2E0 /* my_malloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_malloc.c; path = "mariadb-native-client/libmysql/my_malloc.c"; sourceTree = SOURCE_ROOT; };
+		652AD427166F52C10077D2E0 /* my_messnc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_messnc.c; path = "mariadb-native-client/libmysql/my_messnc.c"; sourceTree = SOURCE_ROOT; };
+		652AD428166F52C10077D2E0 /* my_net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_net.c; path = "mariadb-native-client/libmysql/my_net.c"; sourceTree = SOURCE_ROOT; };
+		652AD429166F52C10077D2E0 /* my_once.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_once.c; path = "mariadb-native-client/libmysql/my_once.c"; sourceTree = SOURCE_ROOT; };
+		652AD42A166F52C10077D2E0 /* my_open.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_open.c; path = "mariadb-native-client/libmysql/my_open.c"; sourceTree = SOURCE_ROOT; };
+		652AD42B166F52C10077D2E0 /* my_port.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_port.c; path = "mariadb-native-client/libmysql/my_port.c"; sourceTree = SOURCE_ROOT; };
+		652AD42C166F52C10077D2E0 /* my_pthread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_pthread.c; path = "mariadb-native-client/libmysql/my_pthread.c"; sourceTree = SOURCE_ROOT; };
+		652AD42D166F52C10077D2E0 /* my_read.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_read.c; path = "mariadb-native-client/libmysql/my_read.c"; sourceTree = SOURCE_ROOT; };
+		652AD42E166F52C10077D2E0 /* my_realloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_realloc.c; path = "mariadb-native-client/libmysql/my_realloc.c"; sourceTree = SOURCE_ROOT; };
+		652AD42F166F52C10077D2E0 /* my_secure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_secure.c; path = "mariadb-native-client/libmysql/my_secure.c"; sourceTree = SOURCE_ROOT; };
+		652AD430166F52C10077D2E0 /* my_seek.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_seek.c; path = "mariadb-native-client/libmysql/my_seek.c"; sourceTree = SOURCE_ROOT; };
+		652AD431166F52C10077D2E0 /* my_static.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_static.c; path = "mariadb-native-client/libmysql/my_static.c"; sourceTree = SOURCE_ROOT; };
+		652AD432166F52C10077D2E0 /* my_static.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_static.h; path = "mariadb-native-client/libmysql/my_static.h"; sourceTree = SOURCE_ROOT; };
+		652AD433166F52C10077D2E0 /* my_stmt_codec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_stmt_codec.c; path = "mariadb-native-client/libmysql/my_stmt_codec.c"; sourceTree = SOURCE_ROOT; };
+		652AD434166F52C10077D2E0 /* my_stmt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_stmt.c; path = "mariadb-native-client/libmysql/my_stmt.c"; sourceTree = SOURCE_ROOT; };
+		652AD435166F52C10077D2E0 /* my_symlink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_symlink.c; path = "mariadb-native-client/libmysql/my_symlink.c"; sourceTree = SOURCE_ROOT; };
+		652AD436166F52C10077D2E0 /* my_thr_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_thr_init.c; path = "mariadb-native-client/libmysql/my_thr_init.c"; sourceTree = SOURCE_ROOT; };
+		652AD437166F52C10077D2E0 /* my_write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_write.c; path = "mariadb-native-client/libmysql/my_write.c"; sourceTree = SOURCE_ROOT; };
+		652AD438166F52C10077D2E0 /* password.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = password.c; path = "mariadb-native-client/libmysql/password.c"; sourceTree = SOURCE_ROOT; };
+		652AD439166F52C10077D2E0 /* safemalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = safemalloc.c; path = "mariadb-native-client/libmysql/safemalloc.c"; sourceTree = SOURCE_ROOT; };
+		652AD43A166F52C10077D2E0 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = "mariadb-native-client/libmysql/sha1.c"; sourceTree = SOURCE_ROOT; };
+		652AD43B166F52C10077D2E0 /* str2int.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = str2int.c; path = "mariadb-native-client/libmysql/str2int.c"; sourceTree = SOURCE_ROOT; };
+		652AD43C166F52C10077D2E0 /* strcend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strcend.c; path = "mariadb-native-client/libmysql/strcend.c"; sourceTree = SOURCE_ROOT; };
+		652AD43D166F52C10077D2E0 /* strcont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strcont.c; path = "mariadb-native-client/libmysql/strcont.c"; sourceTree = SOURCE_ROOT; };
+		652AD43E166F52C10077D2E0 /* strend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strend.c; path = "mariadb-native-client/libmysql/strend.c"; sourceTree = SOURCE_ROOT; };
+		652AD43F166F52C10077D2E0 /* strfill.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strfill.c; path = "mariadb-native-client/libmysql/strfill.c"; sourceTree = SOURCE_ROOT; };
+		652AD440166F52C10077D2E0 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = string.c; path = "mariadb-native-client/libmysql/string.c"; sourceTree = SOURCE_ROOT; };
+		652AD441166F52C10077D2E0 /* strinstr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strinstr.c; path = "mariadb-native-client/libmysql/strinstr.c"; sourceTree = SOURCE_ROOT; };
+		652AD442166F52C10077D2E0 /* strmake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strmake.c; path = "mariadb-native-client/libmysql/strmake.c"; sourceTree = SOURCE_ROOT; };
+		652AD443166F52C10077D2E0 /* strmov.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strmov.c; path = "mariadb-native-client/libmysql/strmov.c"; sourceTree = SOURCE_ROOT; };
+		652AD444166F52C10077D2E0 /* strnmov.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strnmov.c; path = "mariadb-native-client/libmysql/strnmov.c"; sourceTree = SOURCE_ROOT; };
+		652AD445166F52C10077D2E0 /* strtoll.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strtoll.c; path = "mariadb-native-client/libmysql/strtoll.c"; sourceTree = SOURCE_ROOT; };
+		652AD446166F52C10077D2E0 /* strtoull.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strtoull.c; path = "mariadb-native-client/libmysql/strtoull.c"; sourceTree = SOURCE_ROOT; };
+		652AD447166F52C10077D2E0 /* strxmov.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strxmov.c; path = "mariadb-native-client/libmysql/strxmov.c"; sourceTree = SOURCE_ROOT; };
+		652AD448166F52C10077D2E0 /* strxnmov.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strxnmov.c; path = "mariadb-native-client/libmysql/strxnmov.c"; sourceTree = SOURCE_ROOT; };
+		652AD449166F52C10077D2E0 /* thr_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = thr_mutex.c; path = "mariadb-native-client/libmysql/thr_mutex.c"; sourceTree = SOURCE_ROOT; };
+		652AD44A166F52C10077D2E0 /* typelib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = typelib.c; path = "mariadb-native-client/libmysql/typelib.c"; sourceTree = SOURCE_ROOT; };
+		652AD49E166F53460077D2E0 /* my_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = my_config.h; sourceTree = "<group>"; };
+		652AD4A0166F56320077D2E0 /* mysql_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mysql_version.h; sourceTree = "<group>"; };
+		652AD4DB166F57790077D2E0 /* my_global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_global.h; path = "mariadb-native-client/include/my_global.h"; sourceTree = SOURCE_ROOT; };
+		652AD4DD166F57940077D2E0 /* dbug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dbug.h; path = "mariadb-native-client/include/dbug.h"; sourceTree = SOURCE_ROOT; };
+		652AD4DF166F586A0077D2E0 /* my_sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_sys.h; path = "mariadb-native-client/include/my_sys.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E1166F58BF0077D2E0 /* m_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_ctype.h; path = "mariadb-native-client/include/m_ctype.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E3166F59190077D2E0 /* m_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_string.h; path = "mariadb-native-client/include/m_string.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E5166F59410077D2E0 /* errmsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = errmsg.h; path = "mariadb-native-client/include/errmsg.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E6166F59410077D2E0 /* getopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = getopt.h; path = "mariadb-native-client/include/getopt.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E7166F59410077D2E0 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global.h; path = "mariadb-native-client/include/global.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E8166F59410077D2E0 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "mariadb-native-client/include/hash.h"; sourceTree = SOURCE_ROOT; };
+		652AD4E9166F59410077D2E0 /* my_alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_alarm.h; path = "mariadb-native-client/include/my_alarm.h"; sourceTree = SOURCE_ROOT; };
+		652AD4EA166F59410077D2E0 /* my_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_base.h; path = "mariadb-native-client/include/my_base.h"; sourceTree = SOURCE_ROOT; };
+		652AD4EB166F59410077D2E0 /* my_dir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_dir.h; path = "mariadb-native-client/include/my_dir.h"; sourceTree = SOURCE_ROOT; };
+		652AD4EC166F59410077D2E0 /* my_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_list.h; path = "mariadb-native-client/include/my_list.h"; sourceTree = SOURCE_ROOT; };
+		652AD4ED166F59410077D2E0 /* my_net.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_net.h; path = "mariadb-native-client/include/my_net.h"; sourceTree = SOURCE_ROOT; };
+		652AD4EE166F59410077D2E0 /* my_no_pthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_no_pthread.h; path = "mariadb-native-client/include/my_no_pthread.h"; sourceTree = SOURCE_ROOT; };
+		652AD4EF166F59410077D2E0 /* my_pthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_pthread.h; path = "mariadb-native-client/include/my_pthread.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F0166F59410077D2E0 /* my_secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_secure.h; path = "mariadb-native-client/include/my_secure.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F1166F59410077D2E0 /* my_stmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_stmt.h; path = "mariadb-native-client/include/my_stmt.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F2166F59410077D2E0 /* client_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = client_plugin.h; path = "mariadb-native-client/include/mysql/client_plugin.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F3166F59410077D2E0 /* plugin_auth_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = plugin_auth_common.h; path = "mariadb-native-client/include/mysql/plugin_auth_common.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F4166F59410077D2E0 /* plugin_auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = plugin_auth.h; path = "mariadb-native-client/include/mysql/plugin_auth.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F5166F59410077D2E0 /* mysql_com.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql_com.h; path = "mariadb-native-client/include/mysql_com.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F6166F59410077D2E0 /* mysql_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql_io.h; path = "mariadb-native-client/include/mysql_io.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F7166F59410077D2E0 /* mysql_mm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql_mm.h; path = "mariadb-native-client/include/mysql_mm.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F8166F59410077D2E0 /* mysql_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql_priv.h; path = "mariadb-native-client/include/mysql_priv.h"; sourceTree = SOURCE_ROOT; };
+		652AD4F9166F59410077D2E0 /* mysql_wireprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql_wireprotocol.h; path = "mariadb-native-client/include/mysql_wireprotocol.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FA166F59410077D2E0 /* mysql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysql.h; path = "mariadb-native-client/include/mysql.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FB166F59410077D2E0 /* mysqld_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysqld_error.h; path = "mariadb-native-client/include/mysqld_error.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FC166F59410077D2E0 /* mysys_err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mysys_err.h; path = "mariadb-native-client/include/mysys_err.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FD166F59410077D2E0 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = "mariadb-native-client/include/sha1.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FE166F59410077D2E0 /* thr_alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = thr_alarm.h; path = "mariadb-native-client/include/thr_alarm.h"; sourceTree = SOURCE_ROOT; };
+		652AD4FF166F59410077D2E0 /* violite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = violite.h; path = "mariadb-native-client/include/violite.h"; sourceTree = SOURCE_ROOT; };
+		652AD51B166F5B8D0077D2E0 /* my_charset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_charset.c; path = "mariadb-native-client/libmysql/my_charset.c"; sourceTree = SOURCE_ROOT; };
+		652AD51C166F5B8D0077D2E0 /* my_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_compress.c; path = "mariadb-native-client/libmysql/my_compress.c"; sourceTree = SOURCE_ROOT; };
+		652AD51D166F5B8E0077D2E0 /* my_vsnprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = my_vsnprintf.c; path = "mariadb-native-client/libmysql/my_vsnprintf.c"; sourceTree = SOURCE_ROOT; };
+		652AD520166F5B8E0077D2E0 /* strnlen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strnlen.c; path = "mariadb-native-client/libmysql/strnlen.c"; sourceTree = SOURCE_ROOT; };
+		652AD521166F5B8E0077D2E0 /* strto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strto.c; path = "mariadb-native-client/libmysql/strto.c"; sourceTree = SOURCE_ROOT; };
+		652AD522166F5B8E0077D2E0 /* violite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = violite.c; path = "mariadb-native-client/libmysql/violite.c"; sourceTree = SOURCE_ROOT; };
+		652AD52B166F5C640077D2E0 /* client_plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = client_plugin.c; path = "mariadb-native-client/libmysql/client_plugin.c"; sourceTree = SOURCE_ROOT; };
+		652AD533166F5FBE0077D2E0 /* libmysql.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libmysql.c; path = "mariadb-native-client/libmysql/libmysql.c"; sourceTree = SOURCE_ROOT; };
+		652AD535166F603B0077D2E0 /* net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = net.c; path = "mariadb-native-client/libmysql/net.c"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +315,8 @@
 		652AD3EC166F51030077D2E0 /* MariaDB */ = {
 			isa = PBXGroup;
 			children = (
+				652AD4A2166F56400077D2E0 /* headers */,
+				652AD3FB166F513F0077D2E0 /* client */,
 				652AD3F3166F51030077D2E0 /* MariaDB.h */,
 				652AD3F4166F51030077D2E0 /* MariaDB.m */,
 				652AD3ED166F51030077D2E0 /* Supporting Files */,
@@ -93,6 +334,140 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		652AD3FB166F513F0077D2E0 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				652AD535166F603B0077D2E0 /* net.c */,
+				652AD533166F5FBE0077D2E0 /* libmysql.c */,
+				652AD52B166F5C640077D2E0 /* client_plugin.c */,
+				652AD51B166F5B8D0077D2E0 /* my_charset.c */,
+				652AD51C166F5B8D0077D2E0 /* my_compress.c */,
+				652AD51D166F5B8E0077D2E0 /* my_vsnprintf.c */,
+				652AD520166F5B8E0077D2E0 /* strnlen.c */,
+				652AD521166F5B8E0077D2E0 /* strto.c */,
+				652AD522166F5B8E0077D2E0 /* violite.c */,
+				652AD3FC166F52C10077D2E0 /* array.c */,
+				652AD3FD166F52C10077D2E0 /* bchange.c */,
+				652AD3FE166F52C10077D2E0 /* bmove_upp.c */,
+				652AD3FF166F52C10077D2E0 /* bmove.c */,
+				652AD400166F52C10077D2E0 /* charset.c */,
+				652AD402166F52C10077D2E0 /* dbug.c */,
+				652AD403166F52C10077D2E0 /* default.c */,
+				652AD404166F52C10077D2E0 /* errmsg.c */,
+				652AD405166F52C10077D2E0 /* errors.c */,
+				652AD406166F52C10077D2E0 /* get_password.c */,
+				652AD407166F52C10077D2E0 /* getopt.c */,
+				652AD408166F52C10077D2E0 /* getopt1.c */,
+				652AD409166F52C10077D2E0 /* int2str.c */,
+				652AD40A166F52C10077D2E0 /* is_prefix.c */,
+				652AD40C166F52C10077D2E0 /* list.c */,
+				652AD40D166F52C10077D2E0 /* llstr.c */,
+				652AD40E166F52C10077D2E0 /* longlong2str.c */,
+				652AD40F166F52C10077D2E0 /* mf_dirname.c */,
+				652AD410166F52C10077D2E0 /* mf_fn_ext.c */,
+				652AD411166F52C10077D2E0 /* mf_format.c */,
+				652AD412166F52C10077D2E0 /* mf_loadpath.c */,
+				652AD413166F52C10077D2E0 /* mf_pack.c */,
+				652AD414166F52C10077D2E0 /* mf_path.c */,
+				652AD415166F52C10077D2E0 /* mf_tempfile.c */,
+				652AD416166F52C10077D2E0 /* mf_unixpath.c */,
+				652AD417166F52C10077D2E0 /* mf_wcomp.c */,
+				652AD418166F52C10077D2E0 /* mulalloc.c */,
+				652AD419166F52C10077D2E0 /* my_alloc.c */,
+				652AD41A166F52C10077D2E0 /* my_auth.c */,
+				652AD41B166F52C10077D2E0 /* my_create.c */,
+				652AD41C166F52C10077D2E0 /* my_delete.c */,
+				652AD41D166F52C10077D2E0 /* my_div.c */,
+				652AD41E166F52C10077D2E0 /* my_error.c */,
+				652AD41F166F52C10077D2E0 /* my_fopen.c */,
+				652AD420166F52C10077D2E0 /* my_fstream.c */,
+				652AD421166F52C10077D2E0 /* my_gethostbyname.c */,
+				652AD422166F52C10077D2E0 /* my_getwd.c */,
+				652AD423166F52C10077D2E0 /* my_init.c */,
+				652AD424166F52C10077D2E0 /* my_lib.c */,
+				652AD425166F52C10077D2E0 /* my_loaddata.c */,
+				652AD426166F52C10077D2E0 /* my_malloc.c */,
+				652AD427166F52C10077D2E0 /* my_messnc.c */,
+				652AD428166F52C10077D2E0 /* my_net.c */,
+				652AD429166F52C10077D2E0 /* my_once.c */,
+				652AD42A166F52C10077D2E0 /* my_open.c */,
+				652AD42B166F52C10077D2E0 /* my_port.c */,
+				652AD42C166F52C10077D2E0 /* my_pthread.c */,
+				652AD42D166F52C10077D2E0 /* my_read.c */,
+				652AD42E166F52C10077D2E0 /* my_realloc.c */,
+				652AD42F166F52C10077D2E0 /* my_secure.c */,
+				652AD430166F52C10077D2E0 /* my_seek.c */,
+				652AD431166F52C10077D2E0 /* my_static.c */,
+				652AD432166F52C10077D2E0 /* my_static.h */,
+				652AD433166F52C10077D2E0 /* my_stmt_codec.c */,
+				652AD434166F52C10077D2E0 /* my_stmt.c */,
+				652AD435166F52C10077D2E0 /* my_symlink.c */,
+				652AD436166F52C10077D2E0 /* my_thr_init.c */,
+				652AD437166F52C10077D2E0 /* my_write.c */,
+				652AD438166F52C10077D2E0 /* password.c */,
+				652AD439166F52C10077D2E0 /* safemalloc.c */,
+				652AD43A166F52C10077D2E0 /* sha1.c */,
+				652AD43B166F52C10077D2E0 /* str2int.c */,
+				652AD43C166F52C10077D2E0 /* strcend.c */,
+				652AD43D166F52C10077D2E0 /* strcont.c */,
+				652AD43E166F52C10077D2E0 /* strend.c */,
+				652AD43F166F52C10077D2E0 /* strfill.c */,
+				652AD440166F52C10077D2E0 /* string.c */,
+				652AD441166F52C10077D2E0 /* strinstr.c */,
+				652AD442166F52C10077D2E0 /* strmake.c */,
+				652AD443166F52C10077D2E0 /* strmov.c */,
+				652AD444166F52C10077D2E0 /* strnmov.c */,
+				652AD445166F52C10077D2E0 /* strtoll.c */,
+				652AD446166F52C10077D2E0 /* strtoull.c */,
+				652AD447166F52C10077D2E0 /* strxmov.c */,
+				652AD448166F52C10077D2E0 /* strxnmov.c */,
+				652AD449166F52C10077D2E0 /* thr_mutex.c */,
+				652AD44A166F52C10077D2E0 /* typelib.c */,
+			);
+			name = client;
+			sourceTree = "<group>";
+		};
+		652AD4A2166F56400077D2E0 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				652AD4E5166F59410077D2E0 /* errmsg.h */,
+				652AD4E6166F59410077D2E0 /* getopt.h */,
+				652AD4E7166F59410077D2E0 /* global.h */,
+				652AD4E8166F59410077D2E0 /* hash.h */,
+				652AD4E9166F59410077D2E0 /* my_alarm.h */,
+				652AD4EA166F59410077D2E0 /* my_base.h */,
+				652AD4EB166F59410077D2E0 /* my_dir.h */,
+				652AD4EC166F59410077D2E0 /* my_list.h */,
+				652AD4ED166F59410077D2E0 /* my_net.h */,
+				652AD4EE166F59410077D2E0 /* my_no_pthread.h */,
+				652AD4EF166F59410077D2E0 /* my_pthread.h */,
+				652AD4F0166F59410077D2E0 /* my_secure.h */,
+				652AD4F1166F59410077D2E0 /* my_stmt.h */,
+				652AD4F2166F59410077D2E0 /* client_plugin.h */,
+				652AD4F3166F59410077D2E0 /* plugin_auth_common.h */,
+				652AD4F4166F59410077D2E0 /* plugin_auth.h */,
+				652AD4F5166F59410077D2E0 /* mysql_com.h */,
+				652AD4F6166F59410077D2E0 /* mysql_io.h */,
+				652AD4F7166F59410077D2E0 /* mysql_mm.h */,
+				652AD4F8166F59410077D2E0 /* mysql_priv.h */,
+				652AD4F9166F59410077D2E0 /* mysql_wireprotocol.h */,
+				652AD4FA166F59410077D2E0 /* mysql.h */,
+				652AD4FB166F59410077D2E0 /* mysqld_error.h */,
+				652AD4FC166F59410077D2E0 /* mysys_err.h */,
+				652AD4FD166F59410077D2E0 /* sha1.h */,
+				652AD4FE166F59410077D2E0 /* thr_alarm.h */,
+				652AD4FF166F59410077D2E0 /* violite.h */,
+				652AD4E3166F59190077D2E0 /* m_string.h */,
+				652AD4E1166F58BF0077D2E0 /* m_ctype.h */,
+				652AD4DF166F586A0077D2E0 /* my_sys.h */,
+				652AD4DD166F57940077D2E0 /* dbug.h */,
+				652AD4DB166F57790077D2E0 /* my_global.h */,
+				652AD4A0166F56320077D2E0 /* mysql_version.h */,
+				652AD49E166F53460077D2E0 /* my_config.h */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,6 +475,40 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652AD49F166F53460077D2E0 /* my_config.h in Headers */,
+				652AD4A1166F56320077D2E0 /* mysql_version.h in Headers */,
+				652AD4DC166F57790077D2E0 /* my_global.h in Headers */,
+				652AD4DE166F57940077D2E0 /* dbug.h in Headers */,
+				652AD4E0166F586A0077D2E0 /* my_sys.h in Headers */,
+				652AD4E2166F58BF0077D2E0 /* m_ctype.h in Headers */,
+				652AD4E4166F59190077D2E0 /* m_string.h in Headers */,
+				652AD500166F59410077D2E0 /* errmsg.h in Headers */,
+				652AD501166F59410077D2E0 /* getopt.h in Headers */,
+				652AD502166F59410077D2E0 /* global.h in Headers */,
+				652AD503166F59410077D2E0 /* hash.h in Headers */,
+				652AD504166F59410077D2E0 /* my_alarm.h in Headers */,
+				652AD505166F59410077D2E0 /* my_base.h in Headers */,
+				652AD506166F59410077D2E0 /* my_dir.h in Headers */,
+				652AD507166F59410077D2E0 /* my_list.h in Headers */,
+				652AD508166F59410077D2E0 /* my_net.h in Headers */,
+				652AD509166F59410077D2E0 /* my_no_pthread.h in Headers */,
+				652AD50A166F59410077D2E0 /* my_pthread.h in Headers */,
+				652AD50B166F59410077D2E0 /* my_secure.h in Headers */,
+				652AD50C166F59410077D2E0 /* my_stmt.h in Headers */,
+				652AD50D166F59410077D2E0 /* client_plugin.h in Headers */,
+				652AD50E166F59410077D2E0 /* plugin_auth_common.h in Headers */,
+				652AD50F166F59410077D2E0 /* plugin_auth.h in Headers */,
+				652AD510166F59410077D2E0 /* mysql_com.h in Headers */,
+				652AD511166F59410077D2E0 /* mysql_io.h in Headers */,
+				652AD512166F59410077D2E0 /* mysql_mm.h in Headers */,
+				652AD513166F59410077D2E0 /* mysql_priv.h in Headers */,
+				652AD514166F59410077D2E0 /* mysql_wireprotocol.h in Headers */,
+				652AD515166F59410077D2E0 /* mysql.h in Headers */,
+				652AD516166F59410077D2E0 /* mysqld_error.h in Headers */,
+				652AD517166F59410077D2E0 /* mysys_err.h in Headers */,
+				652AD518166F59410077D2E0 /* sha1.h in Headers */,
+				652AD519166F59410077D2E0 /* thr_alarm.h in Headers */,
+				652AD51A166F59410077D2E0 /* violite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +576,91 @@
 			buildActionMask = 2147483647;
 			files = (
 				652AD3F5166F51030077D2E0 /* MariaDB.m in Sources */,
+				652AD44B166F52C10077D2E0 /* array.c in Sources */,
+				652AD44C166F52C10077D2E0 /* bchange.c in Sources */,
+				652AD44D166F52C10077D2E0 /* bmove_upp.c in Sources */,
+				652AD44E166F52C10077D2E0 /* bmove.c in Sources */,
+				652AD44F166F52C10077D2E0 /* charset.c in Sources */,
+				652AD451166F52C10077D2E0 /* dbug.c in Sources */,
+				652AD452166F52C10077D2E0 /* default.c in Sources */,
+				652AD453166F52C10077D2E0 /* errmsg.c in Sources */,
+				652AD454166F52C10077D2E0 /* errors.c in Sources */,
+				652AD455166F52C10077D2E0 /* get_password.c in Sources */,
+				652AD456166F52C10077D2E0 /* getopt.c in Sources */,
+				652AD457166F52C10077D2E0 /* getopt1.c in Sources */,
+				652AD458166F52C10077D2E0 /* int2str.c in Sources */,
+				652AD459166F52C10077D2E0 /* is_prefix.c in Sources */,
+				652AD45B166F52C10077D2E0 /* list.c in Sources */,
+				652AD45C166F52C10077D2E0 /* llstr.c in Sources */,
+				652AD45D166F52C10077D2E0 /* longlong2str.c in Sources */,
+				652AD45E166F52C10077D2E0 /* mf_dirname.c in Sources */,
+				652AD45F166F52C10077D2E0 /* mf_fn_ext.c in Sources */,
+				652AD460166F52C10077D2E0 /* mf_format.c in Sources */,
+				652AD461166F52C10077D2E0 /* mf_loadpath.c in Sources */,
+				652AD462166F52C10077D2E0 /* mf_pack.c in Sources */,
+				652AD463166F52C10077D2E0 /* mf_path.c in Sources */,
+				652AD464166F52C10077D2E0 /* mf_tempfile.c in Sources */,
+				652AD465166F52C10077D2E0 /* mf_unixpath.c in Sources */,
+				652AD466166F52C10077D2E0 /* mf_wcomp.c in Sources */,
+				652AD467166F52C10077D2E0 /* mulalloc.c in Sources */,
+				652AD468166F52C10077D2E0 /* my_alloc.c in Sources */,
+				652AD469166F52C10077D2E0 /* my_auth.c in Sources */,
+				652AD46A166F52C10077D2E0 /* my_create.c in Sources */,
+				652AD46B166F52C10077D2E0 /* my_delete.c in Sources */,
+				652AD46C166F52C10077D2E0 /* my_div.c in Sources */,
+				652AD46D166F52C10077D2E0 /* my_error.c in Sources */,
+				652AD46E166F52C10077D2E0 /* my_fopen.c in Sources */,
+				652AD46F166F52C10077D2E0 /* my_fstream.c in Sources */,
+				652AD470166F52C10077D2E0 /* my_gethostbyname.c in Sources */,
+				652AD471166F52C10077D2E0 /* my_getwd.c in Sources */,
+				652AD472166F52C10077D2E0 /* my_init.c in Sources */,
+				652AD473166F52C10077D2E0 /* my_lib.c in Sources */,
+				652AD474166F52C10077D2E0 /* my_loaddata.c in Sources */,
+				652AD475166F52C10077D2E0 /* my_malloc.c in Sources */,
+				652AD476166F52C10077D2E0 /* my_messnc.c in Sources */,
+				652AD477166F52C10077D2E0 /* my_net.c in Sources */,
+				652AD478166F52C10077D2E0 /* my_once.c in Sources */,
+				652AD479166F52C10077D2E0 /* my_open.c in Sources */,
+				652AD47A166F52C10077D2E0 /* my_port.c in Sources */,
+				652AD47B166F52C10077D2E0 /* my_pthread.c in Sources */,
+				652AD47C166F52C10077D2E0 /* my_read.c in Sources */,
+				652AD47D166F52C10077D2E0 /* my_realloc.c in Sources */,
+				652AD47E166F52C10077D2E0 /* my_secure.c in Sources */,
+				652AD47F166F52C10077D2E0 /* my_seek.c in Sources */,
+				652AD480166F52C10077D2E0 /* my_static.c in Sources */,
+				652AD482166F52C10077D2E0 /* my_stmt_codec.c in Sources */,
+				652AD483166F52C10077D2E0 /* my_stmt.c in Sources */,
+				652AD484166F52C10077D2E0 /* my_symlink.c in Sources */,
+				652AD485166F52C10077D2E0 /* my_thr_init.c in Sources */,
+				652AD486166F52C10077D2E0 /* my_write.c in Sources */,
+				652AD487166F52C10077D2E0 /* password.c in Sources */,
+				652AD488166F52C10077D2E0 /* safemalloc.c in Sources */,
+				652AD489166F52C10077D2E0 /* sha1.c in Sources */,
+				652AD48A166F52C10077D2E0 /* str2int.c in Sources */,
+				652AD48B166F52C10077D2E0 /* strcend.c in Sources */,
+				652AD48C166F52C10077D2E0 /* strcont.c in Sources */,
+				652AD48D166F52C10077D2E0 /* strend.c in Sources */,
+				652AD48E166F52C10077D2E0 /* strfill.c in Sources */,
+				652AD48F166F52C10077D2E0 /* string.c in Sources */,
+				652AD490166F52C10077D2E0 /* strinstr.c in Sources */,
+				652AD491166F52C10077D2E0 /* strmake.c in Sources */,
+				652AD492166F52C10077D2E0 /* strmov.c in Sources */,
+				652AD493166F52C10077D2E0 /* strnmov.c in Sources */,
+				652AD494166F52C10077D2E0 /* strtoll.c in Sources */,
+				652AD495166F52C10077D2E0 /* strtoull.c in Sources */,
+				652AD496166F52C10077D2E0 /* strxmov.c in Sources */,
+				652AD497166F52C10077D2E0 /* strxnmov.c in Sources */,
+				652AD498166F52C10077D2E0 /* thr_mutex.c in Sources */,
+				652AD499166F52C10077D2E0 /* typelib.c in Sources */,
+				652AD523166F5B8E0077D2E0 /* my_charset.c in Sources */,
+				652AD524166F5B8E0077D2E0 /* my_compress.c in Sources */,
+				652AD525166F5B8E0077D2E0 /* my_vsnprintf.c in Sources */,
+				652AD528166F5B8E0077D2E0 /* strnlen.c in Sources */,
+				652AD529166F5B8E0077D2E0 /* strto.c in Sources */,
+				652AD52A166F5B8E0077D2E0 /* violite.c in Sources */,
+				652AD52F166F5C640077D2E0 /* client_plugin.c in Sources */,
+				652AD534166F5FBE0077D2E0 /* libmysql.c in Sources */,
+				652AD536166F603B0077D2E0 /* net.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,12 +696,16 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					THREAD,
+					HAVE_SIGSET,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/mariadb-native-client/include/";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -228,10 +726,16 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					THREAD,
+					HAVE_SIGSET,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/mariadb-native-client/include/";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
