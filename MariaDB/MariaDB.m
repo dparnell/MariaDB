@@ -46,6 +46,10 @@ static void createError(NSError** error, MYSQL* mysql) {
     }
 }
 
++ (MariaDB*) newWithHost:(NSString*)host user:(NSString*)username password:(NSString*)password database:(NSString*)database port:(UInt16)port andError:(NSError**)error {
+    return [[MariaDB alloc] initWithHost: host user: username password: password database: database port: port socket: nil flags: 0 andError: error];
+}
+
 - (id) initWithHost:(NSString*)host user:(NSString*)username password:(NSString*)password database:(NSString*)database port:(UInt16)port socket:(NSString*)socket flags:(int)flags andError:(NSError **)error {
     self = [super init];
     if(self) {
@@ -71,6 +75,22 @@ static void createError(NSError** error, MYSQL* mysql) {
 
 - (void) dealloc {
     [self close: nil];
+}
+
+- (BOOL)execute:(NSString*)query withError:(NSError**)error {
+    const char* sql = [query cStringUsingEncoding: NSUTF8StringEncoding];
+    
+    if (mysql_real_query(mysql, sql, (uint)strlen(sql))) {
+        
+        createError(error, mysql);
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (UInt64)affectedRows {
+    return mysql_affected_rows(mysql);
 }
 
 - (BOOL) close:(NSError **)error {

@@ -26,7 +26,12 @@
 
 @interface MariaDB : NSObject
 
++ (MariaDB*) newWithHost:(NSString*)host user:(NSString*)username password:(NSString*)password database:(NSString*)database port:(UInt16)port andError:(NSError**)error;
+
 - (id) initWithHost:(NSString*)host user:(NSString*)username password:(NSString*)password database:(NSString*)database port:(UInt16)port socket:(NSString*)socket flags:(int)flags andError:(NSError**)error;
+
+- (BOOL)execute:(NSString*)query withError:(NSError**)error;
+- (UInt64)affectedRows;
 
 - (BOOL)close:(NSError**)error;
 
