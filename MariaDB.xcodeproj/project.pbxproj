@@ -134,6 +134,8 @@
 		652AD54516704BF00077D2E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652AD54316704BF00077D2E0 /* InfoPlist.strings */; };
 		652AD54816704BF00077D2E0 /* MariaDBUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652AD54716704BF00077D2E0 /* MariaDBUnitTests.m */; };
 		652AD54F16704C0A0077D2E0 /* MariaDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AD3E3166F51030077D2E0 /* MariaDB.framework */; };
+		652AD5501670ADE30077D2E0 /* MariaDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 652AD3F3166F51030077D2E0 /* MariaDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		652AD5521670AE370077D2E0 /* COPYING.LIB in Resources */ = {isa = PBXBuildFile; fileRef = 652AD5511670AE370077D2E0 /* COPYING.LIB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +286,7 @@
 		652AD54616704BF00077D2E0 /* MariaDBUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MariaDBUnitTests.h; sourceTree = "<group>"; };
 		652AD54716704BF00077D2E0 /* MariaDBUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MariaDBUnitTests.m; sourceTree = "<group>"; };
 		652AD54916704BF00077D2E0 /* MariaDBUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MariaDBUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		652AD5511670AE370077D2E0 /* COPYING.LIB */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING.LIB; path = "mariadb-native-client/COPYING.LIB"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +365,7 @@
 		652AD3ED166F51030077D2E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				652AD5511670AE370077D2E0 /* COPYING.LIB */,
 				652AD3EE166F51030077D2E0 /* MariaDB-Info.plist */,
 				652AD3EF166F51030077D2E0 /* InfoPlist.strings */,
 				652AD3F2166F51030077D2E0 /* MariaDB-Prefix.pch */,
@@ -530,6 +534,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652AD5501670ADE30077D2E0 /* MariaDB.h in Headers */,
 				652AD49F166F53460077D2E0 /* my_config.h in Headers */,
 				652AD4A1166F56320077D2E0 /* mysql_version.h in Headers */,
 				652AD4DC166F57790077D2E0 /* my_global.h in Headers */,
@@ -640,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652AD3F1166F51030077D2E0 /* InfoPlist.strings in Resources */,
+				652AD5521670AE370077D2E0 /* COPYING.LIB in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
