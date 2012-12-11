@@ -951,6 +951,7 @@
 				652AD3FA166F51030077D2E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		652AD54A16704BF00077D2E0 /* Build configuration list for PBXNativeTarget "MariaDBUnitTests" */ = {
 			isa = XCConfigurationList;
@@ -959,6 +960,7 @@
 				652AD54C16704BF00077D2E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

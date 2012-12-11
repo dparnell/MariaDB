@@ -36,6 +36,12 @@
 
 - (BOOL)query:(NSString*)sql withCallback:(BOOL(^)(NSDictionary*, NSArray*))callback andError:(NSError**)error;
 
+- (NSArray*) query:(NSString*) sql withError:(NSError**)error;
+- (NSDictionary*) nextRow;
+
 - (BOOL)close:(NSError**)error;
+
+- (NSString*) escapeString:(NSString*)aString;
+- (NSString*) escapeData:(NSData*)someData;
 
 @end
