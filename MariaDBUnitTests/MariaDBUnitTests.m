@@ -165,6 +165,8 @@
     value = [[rows objectAtIndex: 0] objectForKey: @"current_time"];
     STAssertTrue([value isKindOfClass: [NSDate class]], [NSString stringWithFormat: @"it should be a date - %@", value]);
 
+    STAssertFalse([db execute: @"select * from foobar" withError: &error], @"the select should have failed");
+    error = nil;
     
     [db close: &error];
     STAssertNil(error, [error domain]);

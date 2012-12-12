@@ -91,6 +91,8 @@ static void createError(NSError** error, MYSQL* mysql) {
 - (BOOL)execute:(NSString*)query withError:(NSError**)error {
     const char* sql = [query cStringUsingEncoding: NSUTF8StringEncoding];
     
+    mysql_thread_init();
+    
     if (mysql_real_query(mysql, sql, (uint)strlen(sql))) {
         
         createError(error, mysql);
@@ -129,6 +131,7 @@ static void createError(NSError** error, MYSQL* mysql) {
 - (NSArray*) query:(NSString*) sql withError:(NSError**)error {
     const char* query = [sql cStringUsingEncoding: NSUTF8StringEncoding];
     
+    mysql_thread_init();
     if (mysql_real_query(mysql, query, (uint)strlen(query))) {
         
         createError(error, mysql);
@@ -136,17 +139,22 @@ static void createError(NSError** error, MYSQL* mysql) {
     }
     
     result = mysql_use_result(mysql);
-    field_count = mysql_num_fields(result);
-    NSMutableArray* names = [NSMutableArray arrayWithCapacity: field_count];
-    fields = mysql_fetch_fields(result);
-    
-    for(int i=0; i<field_count; i++) {
-        [names addObject: [NSString stringWithCString: fields[i].name encoding: NSUTF8StringEncoding]];
+    if(result) {
+        field_count = mysql_num_fields(result);
+        NSMutableArray* names = [NSMutableArray arrayWithCapacity: field_count];
+        fields = mysql_fetch_fields(result);
+        
+        for(int i=0; i<field_count; i++) {
+            [names addObject: [NSString stringWithCString: fields[i].name encoding: NSUTF8StringEncoding]];
+        }
+        
+        field_names = names;
+        
+        return names;
     }
     
-    field_names = names;
-    
-    return names;
+    createError(error, mysql);
+    return nil;
 }
 
 - (NSArray*) fieldDataTypes {
