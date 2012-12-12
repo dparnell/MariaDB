@@ -24,6 +24,26 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum MariaDBFieldType { MARIADB_TYPE_DECIMAL, MARIADB_TYPE_TINY,
+    MARIADB_TYPE_SHORT,  MARIADB_TYPE_LONG,
+    MARIADB_TYPE_FLOAT,  MARIADB_TYPE_DOUBLE,
+    MARIADB_TYPE_NULL,   MARIADB_TYPE_TIMESTAMP,
+    MARIADB_TYPE_LONGLONG,MARIADB_TYPE_INT24,
+    MARIADB_TYPE_DATE,   MARIADB_TYPE_TIME,
+    MARIADB_TYPE_DATETIME, MARIADB_TYPE_YEAR,
+    MARIADB_TYPE_NEWDATE, MARIADB_TYPE_VARCHAR,
+    MARIADB_TYPE_BIT,
+    MARIADB_TYPE_NEWDECIMAL=246,
+    MARIADB_TYPE_ENUM=247,
+    MARIADB_TYPE_SET=248,
+    MARIADB_TYPE_TINY_BLOB=249,
+    MARIADB_TYPE_MEDIUM_BLOB=250,
+    MARIADB_TYPE_LONG_BLOB=251,
+    MARIADB_TYPE_BLOB=252,
+    MARIADB_TYPE_VAR_STRING=253,
+    MARIADB_TYPE_STRING=254,
+    MARIADB_TYPE_GEOMETRY=255} MariaDBFieldType;
+
 @interface MariaDB : NSObject
 
 + (MariaDB*) newWithHost:(NSString*)host user:(NSString*)username password:(NSString*)password database:(NSString*)database port:(UInt16)port andError:(NSError**)error;
@@ -37,6 +57,7 @@
 - (BOOL)query:(NSString*)sql withCallback:(BOOL(^)(NSDictionary*, NSArray*))callback andError:(NSError**)error;
 
 - (NSArray*) query:(NSString*) sql withError:(NSError**)error;
+- (NSArray*) fieldDataTypes;
 - (NSDictionary*) nextRow;
 
 - (BOOL)close:(NSError**)error;

@@ -149,6 +149,15 @@ static void createError(NSError** error, MYSQL* mysql) {
     return names;
 }
 
+- (NSArray*) fieldDataTypes {
+    NSMutableArray* dt = [NSMutableArray arrayWithCapacity: field_count];
+    for(int i=0; i<field_count; i++) {
+        [dt addObject: [NSNumber numberWithInt: fields[i].type]];
+    }
+    
+    return dt;
+}
+
 - (NSDictionary*) nextRow {
     MYSQL_ROW row;
     if ((row = mysql_fetch_row(result))) {
