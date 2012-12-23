@@ -109,6 +109,7 @@ static void createError(NSError** error, MYSQL* mysql) {
 }
 
 - (UInt64)affectedRows {
+    mysql_thread_init();
     return mysql_affected_rows(mysql);
 }
 
@@ -168,6 +169,8 @@ static void createError(NSError** error, MYSQL* mysql) {
 
 - (NSDictionary*) nextRow {
     MYSQL_ROW row;
+    mysql_thread_init();
+    
     if ((row = mysql_fetch_row(result))) {
         NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity: field_count];
         unsigned long *lengths = mysql_fetch_lengths(result);
@@ -248,6 +251,7 @@ static void createError(NSError** error, MYSQL* mysql) {
 
 - (BOOL) close:(NSError **)error {
     if(mysql) {
+        mysql_thread_init();
         mysql_close(mysql);
         mysql = nil;
     }
