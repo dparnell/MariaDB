@@ -258,6 +258,8 @@ static void createError(NSError** error, MYSQL* mysql) {
 - (NSString*) escapeString:(NSString*)aString {
     NSUInteger L = [aString length];
     char* buffer = malloc(L*2);
+    
+    mysql_thread_init();
     mysql_real_escape_string(mysql, buffer, [aString cStringUsingEncoding: NSASCIIStringEncoding], L);
     
     NSString* str = [NSString stringWithCString: buffer encoding: NSASCIIStringEncoding];
@@ -268,6 +270,8 @@ static void createError(NSError** error, MYSQL* mysql) {
 - (NSString*) escapeData:(NSData*)someData {
     NSUInteger L = [someData length];
     char* buffer = malloc(L*2);
+    
+    mysql_thread_init();
     mysql_real_escape_string(mysql, buffer, [someData bytes], L);
     
     NSString* str = [NSString stringWithCString: buffer encoding: NSASCIIStringEncoding];
