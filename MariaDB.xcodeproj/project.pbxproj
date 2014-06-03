@@ -610,7 +610,7 @@
 			name = MariaDBUnitTests;
 			productName = MariaDBUnitTests;
 			productReference = 652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -618,7 +618,7 @@
 		652AD3D9166F51030077D2E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Automagic Software Pty Ltd";
 			};
