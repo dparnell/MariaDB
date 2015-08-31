@@ -22,8 +22,8 @@ MA 02111-1307, USA
 */
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface MariaDBUnitTests : SenTestCase
+@interface MariaDBUnitTests : XCTestCase
 
 @end

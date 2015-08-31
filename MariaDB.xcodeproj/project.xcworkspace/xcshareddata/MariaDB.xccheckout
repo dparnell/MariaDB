@@ -10,29 +10,41 @@
 	<string>MariaDB</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>947DBC92-714D-4ACB-8437-79FD4F01FF2B</key>
-		<string>ssh://github.com/dparnell/MariaDB.git</string>
+		<key>1DA6F465190E8BBAE33BE55B0E0057E0CCE4BE9D</key>
+		<string>space.local:querything3.git</string>
+		<key>25CC6ED3404FBF801B8D063949885EE9716915BA</key>
+		<string>github.com:dparnell/MariaDB.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MariaDB.xcodeproj/project.xcworkspace</string>
+	<string>MariaDB.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>947DBC92-714D-4ACB-8437-79FD4F01FF2B</key>
+		<key>1DA6F465190E8BBAE33BE55B0E0057E0CCE4BE9D</key>
+		<string>../../../..</string>
+		<key>25CC6ED3404FBF801B8D063949885EE9716915BA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/dparnell/MariaDB.git</string>
+	<string>github.com:dparnell/MariaDB.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>947DBC92-714D-4ACB-8437-79FD4F01FF2B</string>
+	<string>25CC6ED3404FBF801B8D063949885EE9716915BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>947DBC92-714D-4ACB-8437-79FD4F01FF2B</string>
+			<string>1DA6F465190E8BBAE33BE55B0E0057E0CCE4BE9D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>25CC6ED3404FBF801B8D063949885EE9716915BA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MariaDB</string>
 		</dict>

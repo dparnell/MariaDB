@@ -129,7 +129,6 @@
 		652AD52F166F5C640077D2E0 /* client_plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD52B166F5C640077D2E0 /* client_plugin.c */; };
 		652AD534166F5FBE0077D2E0 /* libmysql.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD533166F5FBE0077D2E0 /* libmysql.c */; };
 		652AD536166F603B0077D2E0 /* net.c in Sources */ = {isa = PBXBuildFile; fileRef = 652AD535166F603B0077D2E0 /* net.c */; };
-		652AD53E16704BF00077D2E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AD53D16704BF00077D2E0 /* SenTestingKit.framework */; };
 		652AD53F16704BF00077D2E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AD3E6166F51030077D2E0 /* Cocoa.framework */; };
 		652AD54516704BF00077D2E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652AD54316704BF00077D2E0 /* InfoPlist.strings */; };
 		652AD54816704BF00077D2E0 /* MariaDBUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652AD54716704BF00077D2E0 /* MariaDBUnitTests.m */; };
@@ -280,7 +279,6 @@
 		652AD533166F5FBE0077D2E0 /* libmysql.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libmysql.c; path = "mariadb-native-client/libmysql/libmysql.c"; sourceTree = SOURCE_ROOT; };
 		652AD535166F603B0077D2E0 /* net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = net.c; path = "mariadb-native-client/libmysql/net.c"; sourceTree = SOURCE_ROOT; };
 		652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariaDBUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		652AD53D16704BF00077D2E0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		652AD54216704BF00077D2E0 /* MariaDBUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MariaDBUnitTests-Info.plist"; sourceTree = "<group>"; };
 		652AD54416704BF00077D2E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652AD54616704BF00077D2E0 /* MariaDBUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MariaDBUnitTests.h; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				652AD54F16704C0A0077D2E0 /* MariaDB.framework in Frameworks */,
-				652AD53E16704BF00077D2E0 /* SenTestingKit.framework in Frameworks */,
 				652AD53F16704BF00077D2E0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				652AD3E6166F51030077D2E0 /* Cocoa.framework */,
-				652AD53D16704BF00077D2E0 /* SenTestingKit.framework */,
 				652AD3E8166F51030077D2E0 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -600,7 +596,6 @@
 				652AD53716704BF00077D2E0 /* Sources */,
 				652AD53816704BF00077D2E0 /* Frameworks */,
 				652AD53916704BF00077D2E0 /* Resources */,
-				652AD53A16704BF00077D2E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -610,7 +605,7 @@
 			name = MariaDBUnitTests;
 			productName = MariaDBUnitTests;
 			productReference = 652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -618,7 +613,7 @@
 		652AD3D9166F51030077D2E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0610;
+				LastTestingUpgradeCheck = 0640;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Automagic Software Pty Ltd";
 			};
@@ -659,22 +654,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		652AD53A16704BF00077D2E0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		652AD3DE166F51030077D2E0 /* Sources */ = {
@@ -915,7 +894,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MariaDBUnitTests/MariaDBUnitTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -924,7 +906,6 @@
 				);
 				INFOPLIST_FILE = "MariaDBUnitTests/MariaDBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -932,12 +913,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MariaDBUnitTests/MariaDBUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "MariaDBUnitTests/MariaDBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
