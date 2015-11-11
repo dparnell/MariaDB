@@ -278,7 +278,7 @@
 		652AD52B166F5C640077D2E0 /* client_plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = client_plugin.c; path = "mariadb-native-client/libmysql/client_plugin.c"; sourceTree = SOURCE_ROOT; };
 		652AD533166F5FBE0077D2E0 /* libmysql.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libmysql.c; path = "mariadb-native-client/libmysql/libmysql.c"; sourceTree = SOURCE_ROOT; };
 		652AD535166F603B0077D2E0 /* net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = net.c; path = "mariadb-native-client/libmysql/net.c"; sourceTree = SOURCE_ROOT; };
-		652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariaDBUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		652AD53C16704BF00077D2E0 /* MariaDBUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariaDBUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		652AD54216704BF00077D2E0 /* MariaDBUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MariaDBUnitTests-Info.plist"; sourceTree = "<group>"; };
 		652AD54416704BF00077D2E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652AD54616704BF00077D2E0 /* MariaDBUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MariaDBUnitTests.h; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				652AD3E3166F51030077D2E0 /* MariaDB.framework */,
-				652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */,
+				652AD53C16704BF00077D2E0 /* MariaDBUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -604,7 +604,7 @@
 			);
 			name = MariaDBUnitTests;
 			productName = MariaDBUnitTests;
-			productReference = 652AD53C16704BF00077D2E0 /* MariaDBUnitTests.octest */;
+			productReference = 652AD53C16704BF00077D2E0 /* MariaDBUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -614,7 +614,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0640;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Automagic Software Pty Ltd";
 			};
 			buildConfigurationList = 652AD3DC166F51030077D2E0 /* Build configuration list for PBXProject "MariaDB" */;
@@ -797,6 +797,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -865,6 +866,7 @@
 				);
 				INFOPLIST_FILE = "MariaDB/MariaDB-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.automagicsoftware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -885,6 +887,7 @@
 				);
 				INFOPLIST_FILE = "MariaDB/MariaDB-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.automagicsoftware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -905,6 +908,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "MariaDBUnitTests/MariaDBUnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.automagicsoftware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -920,6 +924,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MariaDBUnitTests/MariaDBUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "MariaDBUnitTests/MariaDBUnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.automagicsoftware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
