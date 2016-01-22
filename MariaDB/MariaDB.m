@@ -171,7 +171,7 @@ static void createError(NSError** error, MYSQL* mysql) {
     MYSQL_ROW row;
     mysql_thread_init();
     
-    if ((row = mysql_fetch_row(result))) {
+    if (result && (row = mysql_fetch_row(result))) {
         NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity: field_count];
         unsigned long *lengths = mysql_fetch_lengths(result);
         NSString* str;
@@ -238,7 +238,9 @@ static void createError(NSError** error, MYSQL* mysql) {
         
         return dict;
     } else {
-        mysql_free_result(result);
+        if(result) {
+            mysql_free_result(result);
+        }
         field_names = nil;
         fields = nil;
         result = nil;
