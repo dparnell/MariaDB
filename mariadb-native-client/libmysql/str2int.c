@@ -101,7 +101,7 @@ char *str2int(register const char *src, register int radix, long int lower, long
   while (isspace(*src)) src++;
   sign = -1;
   if (*src == '+') src++; else
-    if (*src == '-') src++, sign = 1;
+      if (*src == '-') { src++; sign = 1; }
 
   /*  Skip leading zeros so that we never compute a power of radix
       in scale that we won't have a need for.  Otherwise sticking
@@ -143,7 +143,7 @@ char *str2int(register const char *src, register int radix, long int lower, long
       errno=ERANGE;
       return NullS;
     }
-    limit = (limit+d)/radix, sofar += d*scale; scale *= radix;
+      limit = (limit+d)/radix; sofar += d*scale; scale *= radix;
   }
   if (n == 0)
   {

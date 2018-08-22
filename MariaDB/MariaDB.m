@@ -136,7 +136,7 @@ static void createError(NSError** error, MYSQL* mysql) {
     if (mysql_real_query(mysql, query, (uint)strlen(query))) {
         
         createError(error, mysql);
-        return NO;
+        return nil;
     }
     
     result = mysql_use_result(mysql);

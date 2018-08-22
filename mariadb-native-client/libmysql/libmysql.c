@@ -106,8 +106,8 @@ static my_bool mysql_reconnect(MYSQL *mysql);
 static sig_handler pipe_sig_handler(int sig);
 static int cli_report_progress(MYSQL *mysql, uchar *packet, uint length);
 
-extern int mysql_client_plugin_init();
-extern void mysql_client_plugin_deinit();
+extern int mysql_client_plugin_init(void);
+extern void mysql_client_plugin_deinit(void);
 
 /*
   Let the user specify that we don't want SIGPIPE;  This doesn't however work

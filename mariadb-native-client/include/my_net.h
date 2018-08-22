@@ -47,7 +47,7 @@ struct hostent;
 struct hostent *my_gethostbyname_r(const char *name,
 				   struct hostent *result, char *buffer,
 				   int buflen, int *h_errnop);
-void my_gethostbyname_r_free();
+void my_gethostbyname_r_free(void);
 #elif defined(HAVE_PTHREAD_ATTR_CREATE) || defined(_AIX) || defined(HAVE_GETHOSTBYNAME_R_GLIBC2_STYLE)
 struct hostent *my_gethostbyname_r(const char *name,
 				   struct hostent *result, char *buffer,
